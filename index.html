@@ -1,0 +1,366 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Developer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            cyan: '#06b6d4',
+                            violet: '#8b5cf6',
+                            emerald: '#10b981',
+                            dark: '#090d16'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090d16;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4;
+        }
+
+        /* Glassmorphism card effects */
+        .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .light .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        /* Ambient Glowing Accents */
+        .glow-cyan {
+            box-shadow: 0 0 30px -5px rgba(6, 182, 212, 0.35);
+        }
+        .glow-violet {
+            box-shadow: 0 0 30px -5px rgba(139, 92, 246, 0.35);
+        }
+
+        /* Background grid texture */
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+        .light .bg-grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-[#090d16] text-slate-100 font-sans transition-colors duration-300 relative overflow-x-hidden min-h-screen bg-grid-pattern dark">
+
+    <!-- Glowing Background Lighting Orbs -->
+    <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-cyan-500/15 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="fixed top-[40%] right-[-10%] w-[500px] h-[500px] bg-violet-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="fixed bottom-[-10%] left-[30%] w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <!-- Navigation Header -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 py-4 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass-card rounded-2xl px-6 py-3 shadow-2xl">
+            <!-- Terminal-Style Logo -->
+            <a href="#" class="text-lg font-mono font-bold tracking-tight flex items-center gap-2 group">
+                <span class="text-brand-cyan">&lt;</span>
+                <span class="text-slate-100 dark:text-white group-hover:text-brand-cyan transition-colors">turubo
+        .dev</span>
+                <span class="text-brand-violet">/&gt;</span>
+            </a>
+<!-- Download Resume Button -->
+<a href="resume.pdf" download="Resume.pdf" class="px-6 py-3 rounded-xl bg-cyan-500 text-slate-950 font-bold hover:bg-cyan-400 transition-all shadow-lg shadow-cyan-500/20 flex items-center gap-2">
+    <i class="fas fa-file-download"></i> Download Resume
+</a>
+            <!-- Desktop Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-mono font-medium text-slate-300">
+                <a href="#about" class="hover:text-brand-cyan transition-colors">/about</a>
+                <a href="#skills" class="hover:text-brand-cyan transition-colors">/skills</a>
+                <a href="#" class="hover:text-brand-cyan transition-colors">/</a>
+                <a href="#experience<!-- Project Card: Task & Dream Manager -->
+<div class="glass-card rounded-2xl p-6 space-y-4 border border-slate-800 hover:border-cyan-500/50 transition-all flex flex-col justify-between">
+    <div class="space-y-3">
+        <!-- Project Category Badge -->
+        <span class="text-xs font-mono px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+            Full Stack / Python App
+        </span>
+        
+        <!-- Project Title -->
+        <h3 class="text-xl font-bold text-slate-100">Dream & Task Guidance Platform</h3>
+        
+        <!-- Project Description -->
+        <p class="text-slate-400 text-sm leading-relaxed">
+            A specialized platform designed to help users achieve their life goals and dreams by providing structured task management and personalized daily guidance.
+        </p>
+        
+        <!-- Tech Stack Tags -->
+        <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 font-mono">Python</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 font-mono">HTML/CSS</span>
+            <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 font-mono">JavaScript</span>
+        </div>
+    </div>
+    
+    <!-- Action Links (GitHub & WhatsApp Contact for inquiries) -->
+    <div class="flex items-center space-x-4 pt-4 border-t border-slate-800/80">
+        <a href="https://github.com/your-username/task-manager" target="_blank" class="text-xs text-slate-400 hover:text-cyan-400 flex items-center gap-1.5 transition-colors">
+            <i class="fab fa-github"></i> Code
+        </a>
+        <a href="https://wa.me/254114520222?text=Hi!%20I%20saw%20your%20Task%20Manager%20project%20on%20your%20portfolio%20and%20want%20to%20learn%20more." target="_blank" class="text-xs text-slate-400 hover:text-cyan-400 flex items-center gap-1.5 transition-colors">
+            <i class="fab fa-whatsapp"></i> Inquire via WhatsApp
+        </a>
+    </div>
+</div>" class="hover:text-brand-cyan transition-colors">/experience</a>
+                <a href="#contact" class="hover:text-brand-cyan transition-colors">/contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center space-x-4">
+                <button id="themeToggle" class="p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 transition-all" aria-label="Toggle Theme">
+                    <i id="themeIcon" class="fas fa-moon"></i>
+                </button>
+
+                <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-300 focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+
+                <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-mono font-semibold rounded-xl bg-gradient-to-r from-cyan-500 to-violet-600 text-white shadow-lg hover:brightness-110 transition-all">
+                    <span>git_connect</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden max-w-7xl mx-auto mt-2 p-6 rounded-2xl glass-card flex-col space-y-4 font-mono text-sm">
+            <a href="#about" class="mobile-link py-2 hover:text-brand-cyan">/about</a>
+            <a href="#skills" class="mobile-link py-2 hover:text-brand-cyan">/skills</a>
+            <a href="#projects" class="mobile-link py-2 hover:text-brand-cyan">/projects</a>
+            <a href="#experience" class="mobile-link py-2 hover:text-brand-cyan">/experience</a>
+            <a href="#contact" class="mobile-link py-2 hover:text-brand-cyan">/contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="my name is ibrahim born to win and life is all about winnig" class="min-h-screen pt-32 pb-20 px-6 flex items-center justify-center relative">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Left Column -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-brand-cyan font-mono text-xs">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span>System Status: Available for Hire</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                    Software Developer & <br class="hidden sm:block"/>
+                    <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-violet-500 bg-clip-text text-transparent">Full-Stack Engineer</span>
+                </h1>
+                
+                <p class="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed">
+                    Building resilient backend architectures, clean API systems, and modern interactive user interfaces with modern tech stacks.
+                </p>
+
+                <!-- Tech Badges -->
+                <div class="flex flex-wrap gap-2 justify-center lg:justify-start font-mono text-xs pt-2">
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/60 text-cyan-400"><i class="fab fa-react mr-1.5"></i>React</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/60 text-green-400"><i class="fab fa-node-js mr-1.5"></i>Node.js</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/60 text-yellow-400"><i class="fab fa-python mr-1.5"></i>Python</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/60 text-blue-400"><i class="fab fa-docker mr-1.5"></i>Docker</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/60 text-purple-400"><i class="fas fa-database mr-1.5"></i>PostgreSQL</span>
+                </div>
+
+                <!-- Call To Actions -->
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4 font-mono text-sm">
+                    <a href="<a href="https://wa.me/254114520222?text=Hi!%20I%20checked%20out%20your%20portfolio%20and%20want%20to%20connect." target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+</a>" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold shadow-lg glow-cyan hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2">
+                        <i class="fas fa-terminal text-xs"></i>
+                        <span>Explore Projects</span>
+                    </a>
+                    <a href="#contact" class="px-7 py-3.5 rounded-xl glass-card font-semibold hover:border-cyan-500/50 transition-all flex items-center gap-2">
+                        <i class="far fa-envelope"></i>
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+
+                <!-- Social Profiles -->
+                <div class="flex items-center justify-center lg:justify-start space-x-6 pt-4 text-slate-400">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 text-2xl transition-transform hover:-translate-y-1"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 text-2xl transition-transform hover:-translate-y-1"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 text-2xl transition-transform hover:-translate-y-1"><i class="fab fa-x-twitter"></i></a>
+                    <button onclick="copyEmail()" class="hover:text-cyan-400 text-xl transition-transform hover:-translate-y-1" title="Copy Email">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Terminal Interactive Graphic -->
+            <div class="lg:col-span-5">
+                <div class="rounded-2xl glass-card border border-slate-700/60 shadow-2xl overflow-hidden font-mono text-xs">
+                    <!-- Terminal Window Bar -->
+                    <div class="bg-slate-900/90 px-4 py-3 flex items-center justify-between border-b border-slate-800">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                        </div>
+                        <span class="text-slate-500 text-[11px]">developer_profile.ts</span>
+                    </div>
+
+                    <!-- Live Code Snippet Display -->
+                    <div class="p-5 space-y-2 text-slate-300 leading-relaxed overflow-x-auto">
+                        <p><span class="text-purple-400">const</span> <span class="text-yellow-300">developer</span> = {</p>
+                        <p class="pl-4"><span class="text-cyan-400">name</span>: <span class="text-emerald-300">'Ibrahim turubo'</span>,</p>
+                        <p class="pl-4"><span class="text-cyan-400">title</span>: <span class="text-emerald-300">'Software Developer'</span>,</p>
+                        <p class="pl-4"><span class="text-cyan-400">stack</span>: [</p>
+                        <p class="pl-8 text-emerald-300">'TypeScript', 'Python', 'Go', 'Docker', 'React'</p>
+                        <p class="pl-4">],</p>
+                        <p class="pl-4"><span class="text-cyan-400">passions</span>: [<span class="text-emerald-300">'Clean Architecture'</span>, <span class="text-emerald-300">'Open Source'</span>],</p>
+                        <p class="pl-4"><span class="text-cyan-400">status</span>: <span class="text-amber-400">'Ready to deploy'</span>,</p>
+                        <p class="pl-4"><span class="text-yellow-300">executeTask</span>: () =&gt; {</p>
+                        <p class="pl-8 text-slate-500">// Transform requirements into code solutions</p>
+                        <p class="pl-8"><span class="text-purple-400">return</span> <span class="text-emerald-300">'Scalable Production Applications'</span>;</p>
+                        <p class="pl-4">}</p>
+                        <p>};</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 px-6 relative border-t border-slate-800/60">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center space-y-3 mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">About Me</h2>
+                <p class="text-slate-400 max-w-xl mx-auto font-mono text-sm">&lt;!-- Engineering principles & background --&gt;</p>
+                <div class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-violet-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-slate-300 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-white">Architecting reliable software and user experiences.</h3>
+                    <p>
+                        I am a Software Developer who loves solving complex algorithmic problems and building elegant applications. My work spans full-stack web applications, microservices, and modern user interfaces with a focus on code readability, security, and high test coverage.
+                    </p>
+                    <p>
+                        Whether designing database schemas, setting up continuous delivery pipelines, or crafting responsive web components, I focus on standard engineering patterns and optimized performance.
+                    </p>
+
+                    <!-- Download Resume Button -->
+                    <div class="pt-2">
+                        <a href="#" onclick="showToast('Resume download activated!'); return false;" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 font-mono text-xs text-cyan-400 transition-all">
+                            <i class="fas fa-file-arrow-down"></i>
+                            <span>Download_Resume.pdf</span>
+                        </a>
+                    </div>
+
+                    <!-- Developer Stats -->
+                    <div class="grid grid-cols-3 gap-4 pt-4 text-center font-mono">
+                        <div class="p-4 rounded-2xl glass-card">
+                            <h4 class="text-2xl sm:text-3xl font-extrabold text-cyan-400">5+</h4>
+                            <p class="text-[11px] text-slate-400 mt-1">Years Coding</p>
+                        </div>
+                        <div class="p-4 rounded-2xl glass-card">
+                            <h4 class="text-2xl sm:text-3xl font-extrabold text-violet-400">30+</h4>
+                            <p class="text-[11px] text-slate-400 mt-1">Projects Built</p>
+                        </div>
+                        <div class="p-4 rounded-2xl glass-card">
+                            <h4 class="text-2xl sm:text-3xl font-extrabold text-emerald-400">2.5k+</h4>
+                            <p class="text-[11px] text-slate-400 mt-1">Git Commits</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engineering Ethos Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-6 rounded-2xl glass-card space-y-3 hover:border-cyan-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <h4 class="text-lg font-bold">Modular Code</h4>
+                        <p class="text-xs text-slate-400">Designing clean, reusable, and decoupled components and services.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl glass-card space-y-3 hover:border-violet-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-violet-500/10 text-violet-400 flex items-center justify-center text-xl">
+                            <i class="fas fa-gauge-high"></i>
+                        </div>
+                        <h4 class="text-lg font-bold">High Speed</h4>
+                        <p class="text-xs text-slate-400">Optimizing database query performance and front-end bundle load times.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl glass-card space-y-3 hover:border-emerald-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <h4 class="text-lg font-bold">Security First</h4>
+                        <p class="text-xs text-slate-400">Enforcing strict input validation, token auth, and CORS security policy.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl glass-card space-y-3 hover:border-blue-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h4 class="text-lg font-bold">CI/CD Automation</h4>
+                        <p class="text-xs text-slate-400">Automating testing suites and cloud deployment pipelines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="python react" class="py-24 px-6 glass-card relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center space-y-3 mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Skills & Tech Stack</h2>
+                <p class="text-slate-400 max-w-xl mx-auto font-mono text-sm">// Core programming technologies & frameworks</p>
+                <div class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-violet-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Frontend -->
+                <div class="p-6 rounded-2xl glass-card border-t-2 border-t-cyan-500 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-laptop-code text-cyan-400 text-xl"></i>
+              c:\Users\benar\Do          <h3 class="text-lg font-bold">Frontend</h3>
+                    </div>
+                    <ul class="space-y-2 text-xs font-mono text-slate-300">
+                        <li class="flex
