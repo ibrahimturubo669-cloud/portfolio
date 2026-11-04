@@ -1,0 +1,342 @@
+
+.app {
+  min-height: 100vh;
+  color: #20312b;
+}
+
+.topbar {
+  min-height: 82px;
+  padding: 16px 6%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid #e7eee9;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: #176b49;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.brand h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.brand span {
+  color: #718078;
+  font-size: 12px;
+}
+
+.navigation {
+  display: flex;
+  gap: 28px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #52645a;
+  font-size: 14px;
+}
+
+.login-button {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 20px;
+  background: #176b49;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 45px 24px;
+}
+
+.welcome {
+  background: #176b49;
+  color: white;
+  padding: 55px 45px;
+  border-radius: 18px;
+  margin-bottom: 45px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.welcome h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  margin: 12px 0;
+}
+
+.welcome p:last-child {
+  color: #e0eee6;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  margin-bottom: 6px;
+}
+
+.section-heading p {
+  color: #718078;
+  margin-top: 0;
+}
+
+.public-label {
+  background: #e6f3eb;
+  color: #176b49;
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 12px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 24px;
+  border: 1px solid #e7eee9;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(20, 60, 40, 0.04);
+}
+
+.card-icon {
+  font-size: 28px;
+}
+
+.card-title {
+  color: #718078;
+  margin: 22px 0 5px;
+}
+
+.stat-card h3 {
+  font-size: 34px;
+  margin: 0;
+  color: #176b49;
+}
+
+.card-description {
+  color: #87938c;
+  font-size: 12px;
+}
+
+.information {
+  margin-top: 55px;
+  padding: 30px;
+  background: #edf5ef;
+  border-radius: 14px;
+}
+
+.information p {
+  color: #627269;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  color: #718078;
+  background: white;
+  border-top: 1px solid #e7eee9;
+  font-size: 13px;
+}
+
+.error-message {
+  color: #b42318;
+}
+
+@media (max-width: 850px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-wrap: wrap;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .welcome {
+    padding: 35px 24px;
+  }
+}
+
+/* Navigation buttons */
+
+.nav-link {
+  border: none;
+  background: transparent;
+  color: #52645a;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Administrator login page */
+
+.login-page {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 38px;
+  background: white;
+  border: 1px solid #e7eee9;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(20, 60, 40, 0.08);
+}
+
+.login-symbol {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+  background: #176b49;
+  color: white;
+  border-radius: 14px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.login-card h1 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.login-subtitle {
+  text-align: center;
+  color: #718078;
+  margin-bottom: 30px;
+}
+
+.login-card label {
+  display: block;
+  margin: 18px 0 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dce5df;
+  border-radius: 8px;
+  outline: none;
+}
+
+.login-card input:focus {
+  border-color: #176b49;
+  box-shadow: 0 0 0 3px rgba(23, 107, 73, 0.1);
+}
+
+.submit-login {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+  background: #176b49;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-login:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.back-button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: transparent;
+  color: #176b49;
+  border: none;
+  cursor: pointer;
+}
+
+.error-message {
+  color: #b42318;
+  font-size: 14px;
+}
+
+/* Admin portal */
+
+.admin-page {
+  max-width: 1200px;
+  min-height: 70vh;
+  margin: auto;
+  padding: 45px 24px;
+}
+
+.admin-welcome {
+  background: #176b49;
+  color: white;
+  padding: 45px;
+  border-radius: 16px;
+}
+
+.admin-content {
+  background: white;
+  padding: 30px;
+  margin-top: 25px;
+  border: 1px solid #e7eee9;
+  border-radius: 14px;
+}
+
+.session-note {
+  color: #718078;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .login-card {
+    padding: 25px;
+  }
+}
